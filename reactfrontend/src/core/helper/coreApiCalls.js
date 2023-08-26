@@ -1,5 +1,4 @@
 import {API} from "../../backend"
-// import { apia } from "../../demo";
 
 export const getProducts = async () => {
     try {
