@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 // eslint-disable react-hooks/exhaustive-deps
 
 import { getProducts } from './helper/coreApiCalls';
+import Base from './Base';
 
 export default function Home() {
 
@@ -27,7 +28,7 @@ export default function Home() {
     
     
     return (
-        <div>
+        <Base>
             <h1>Home components</h1>
             <div className='row'>
                 {products.map((product, index) => {
@@ -38,6 +39,6 @@ export default function Home() {
                     );
                 })}
             </div>
-        </div>
+        </Base>
     );
 }
