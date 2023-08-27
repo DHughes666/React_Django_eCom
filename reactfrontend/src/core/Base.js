@@ -20,9 +20,9 @@ const Base = ({
         <footer className='footer bg-dark mt-auto py-3'>
             <div className='container-fluid bg-success text-white text-center py-3'>
                 <h4>If you got any questions, reach me at instagram</h4>
-                <button btn btn-warning btn-lg>Contact Us</button>
+                <button className='btn btn-warning btn-lg'>Contact Us</button>
                 <div className='container'>
-                    <span className='text-muted'>
+                    <span className='text-warning'>
                         An Awesome Store
                     </span>
                 </div>
