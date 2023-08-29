@@ -1,7 +1,7 @@
 import React from 'react'
 import ImageHelper from './helper/ImageHelper';
 import { Redirect } from "react-router-dom";
-import { addItemToCart } from './helper/cartHelper';
+import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
 
     //TODO 
     const isAuthenticated = true;
@@ -9,7 +9,7 @@ import { addItemToCart } from './helper/cartHelper';
  const Card = ({
     product,
     addToCarty = true,
-    removeFromCart = false,
+    removeFromCart = true,
  }) => {
 
     const cartTitle = product ? product.name : 'Dev Title';
@@ -47,7 +47,10 @@ import { addItemToCart } from './helper/cartHelper';
         return (
             removeFromCart && (
                 <button
-                    onClick={() => {"Product remove from cart"}}
+                    onClick={() => {
+                        removeFromCart(product._id);
+                        console.log('Product removed successfully');
+                    }}
                     className="btn btn-block btn-outline-danger mt-2 mb-2"
                 >Remove from cart</button>
             )
@@ -71,7 +74,7 @@ import { addItemToCart } from './helper/cartHelper';
                     {showAddToCart(addToCart)}
                 </div>
                 <div className="col-12">
-                    {showRemoveFromCart}
+                    {showRemoveFromCart(removeFromCart)}
                 </div>
             </div>
         </div>
