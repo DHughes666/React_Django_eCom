@@ -9,7 +9,7 @@ import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
  const Card = ({
     product,
     addToCarty = true,
-    removeFromCart = true,
+    removeFromCart = false,
  }) => {
 
     const cartTitle = product ? product.name : 'Dev Title';
