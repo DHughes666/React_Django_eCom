@@ -48,7 +48,7 @@ import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
             removeFromCart && (
                 <button
                     onClick={() => {
-                        removeFromCart(product._id);
+                        removeItemFromCart(product._id);
                         console.log('Product removed successfully');
                     }}
                     className="btn btn-block btn-outline-danger mt-2 mb-2"
